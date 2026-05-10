@@ -56,7 +56,7 @@ How to Run the Backend (First Time Setup)
 
 1. Clone the repository
 
-git clone https://github.com/Praneeth2607/UniLeave.git
+git clone https://github.com/KISHORE-RSK/Unileave.git
 cd UniLeave/Backend
 
 ----------------------------------------------------------------

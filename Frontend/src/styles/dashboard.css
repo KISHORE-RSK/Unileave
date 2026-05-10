@@ -1,0 +1,443 @@
+.dashboard-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  background: var(--bg);
+}
+
+.sidebar {
+  background: var(--primary);
+  color: white;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 6px;
+  color: white;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  opacity: 1;
+}
+.logout-btn {
+  background: transparent;
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  color: #dc2626;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: rgba(220, 38, 38, 0.08);
+}
+
+.dashboard-main {
+  padding: 22px 28px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.stat-card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.stat-card h3 {
+  margin-top: 8px;
+  font-size: 1.8rem;
+}
+
+.recent-requests {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.primary-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge.pending {
+  background: rgba(245, 158, 11, 0.15);
+  color: #92400e;
+}
+
+.badge.approved {
+  background: rgba(22, 163, 74, 0.15);
+  color: #166534;
+}
+
+.badge.rejected {
+  background: rgba(220, 38, 38, 0.15);
+  color: #991b1b;
+}
+
+/*-------------------------------
+ APPLY LEAVE 
+ --------------------------------*/
+
+.apply-card {
+  max-width: 520px;
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.form-row label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+/* Inputs + selects stay compact */
+.form-row input,
+.form-row select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+/* Only textarea is tall */
+.form-row textarea {
+  min-height: 80px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.text-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Center the Apply Leave card */
+.apply-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+/* Tighter sections */
+.apply-section {
+  margin-bottom: 14px;
+}
+
+.apply-section h3 {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+/* Navbar right side actions */
+.topbar-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Active sidebar link */
+.sidebar nav a.active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/*----------------------------
+ Faculty Dashboard Styles 
+----------------------------*/
+
+.approve-btn {
+  background: rgba(22, 163, 74, 0.15);
+  color: #166534;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.reject-btn {
+  background: rgba(220, 38, 38, 0.15);
+  color: #991b1b;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+/*----------------------------
+  Calendar Styles 
+----------------------------*/
+.calendar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 26px;
+}
+
+.calendar-card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.06);
+}
+
+.calendar-card h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* colored day circles */
+
+.cal-pending {
+  background: rgba(234, 179, 8, 0.25) !important;
+  border-radius: 50%;
+}
+
+.cal-approved {
+  background: rgba(34, 197, 94, 0.3) !important;
+  border-radius: 50%;
+}
+
+.cal-rejected {
+  background: rgba(239, 68, 68, 0.3) !important;
+  border-radius: 50%;
+}
+.day-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* modal */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-card {
+  background: var(--card);
+  padding: 22px;
+  border-radius: 14px;
+  max-width: 360px;
+  width: 100%;
+  box-shadow: 0 18px 40px rgba(0,0,0,.2);
+}
+
+.modal-card h3 {
+  margin-bottom: 6px;
+}
+
+.modal-subtitle {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.modal-card textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-family: inherit;
+  resize: none;
+  margin-bottom: 16px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.approve-confirm-btn {
+  background: #166534;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reject-confirm-btn {
+  background: #991b1b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.remark-cell {
+  max-width: 200px;
+  font-size: 0.85rem;
+  color: #4b5563;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.remark-cell:hover {
+  white-space: normal;
+  overflow: visible;
+  position: relative;
+  background: white;
+  z-index: 10;
+}
+
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(420px, 1fr)
+  );
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.report-card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.06);
+}
+
+.report-card h3 {
+  margin-bottom: 10px;
+}
